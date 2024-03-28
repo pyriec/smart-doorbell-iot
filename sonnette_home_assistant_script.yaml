@@ -1,0 +1,32 @@
+alias: sonnette
+sequence:
+  - service: media_player.volume_set
+    data:
+      volume_level: 0.8
+  - parallel:
+      - service: media_player.play_media
+        target: {}
+        data:
+          media_content_id: ""
+          media_content_type: ""
+        metadata: {}
+      - service: media_player.play_media
+        target: {}
+        data:
+          media_content_id: ""
+          media_content_type: ""
+        metadata: {}
+      - service: media_player.play_media
+        target: {}
+        data:
+          media_content_id: ""
+          media_content_type: ""
+        metadata: {}
+    enabled: true
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 500
+icon: mdi:bell-ring
+mode: single
